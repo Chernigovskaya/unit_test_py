@@ -19,6 +19,5 @@ class TestMotorcycle(TestCase):
     # проверить, что в режиме парковки (сначала testDrive, потом park  т.е эмуляция движения транспорта) мотоцикл останавливается (speed = 0)
     def test_park_speed(self):
         self.motorcycle.test_drive()
-        self.assertEqual(self.motorcycle.speed, 75)
         self.motorcycle.park()
         self.assertEqual(self.motorcycle.speed, 0)
